@@ -19,7 +19,7 @@ public class ProjectRepositoryImpl implements IProjectRepository {
 
     @Override
     public Project save(Project project) {
-        Project existingProject =findById(project.getId()).orElse(null);
+        Project existingProject = findById(project.getId()).orElse(null);
         if (existingProject == null) {
             projects.add(project);
         } else {
